@@ -12,15 +12,36 @@ import {
     SidebarMenuSub,
     SidebarMenuSubItem
 } from "@/components/ui/sidebar";
-import { Home, Inbox, Calendar, Settings, Search, User, Settings2 } from "lucide-react";
+
+
+import {
+    Sheet,
+    SheetContent,
+    SheetDescription,
+    SheetHeader,
+    SheetTitle,
+    SheetTrigger,
+} from "@/components/ui/sheet"
+
+import {
+    LayoutDashboard, Building2, Network, Users2, Key, History, Warehouse, Package,
+    CreditCard, BookOpenText, MapPin, CalendarClock, LayoutGrid, Link2, Inbox,
+    Calendar, Settings2, DollarSign, CalendarOff, HandCoins, ShieldCheck,
+    CalendarRange, CalendarPlus, GraduationCap, Search, Settings, Repeat, Shield, Clock,
+    FileSpreadsheet, FileText, Scale, TrendingUp, Star, CalendarDays, XCircle, Eye, UserX,
+    PieChart, Building, Plane, Ticket, UserCheck, Briefcase, Printer, Award, Phone, Stethoscope,
+    Asterisk, Signature, Truck, Layers, ChevronDown
+} from 'lucide-react';
+
 import Link from "next/link";
 import { Collapsible, CollapsibleTrigger, CollapsibleContent } from "@/components/ui/collapsible";
 
+
 const menuItems = [
     {
-        title: "Home",
-        url: "/",
-        icon: Home,
+        title: "Dashboard",
+        url: "/dashboard",
+        icon: LayoutDashboard,
     },
     {
         title: "Administration",
@@ -29,133 +50,688 @@ const menuItems = [
             {
                 title: "Company Setup",
                 url: "/administration/company",
-                icon: Settings2
+                icon: Building2
             },
             {
                 title: "Sites Setup",
-                url: "administration/sites",
-                icon: Settings2
+                url: "/administration/sites",
+                icon: Network
             },
             {
                 title: "User accounts",
                 url: "/administration/user-accounts",
-                icon: Settings2
+                icon: Users2
             },
             {
                 title: "Change Password",
                 url: "/account/change-password",
-                icon: Settings2
+                icon: Key
             },
             {
                 title: "Audit Log",
                 url: "/administration/audit-log",
-                icon: Settings2
+                icon: History
             },
             {
                 title: "Dept & Sections Setup",
                 url: "/administration/dept-sections",
-                icon: Settings2
+                icon: Warehouse
             },
             {
                 title: "Project Setup",
                 url: "/administration/project",
-                icon: Settings2
+                icon: Package
             },
             {
                 title: "Currency Setup",
                 url: "/administration/currency",
-                icon: Settings2
+                icon: CreditCard
             },
             {
                 title: "Dictinary Management",
                 url: "/administration/dictionary",
-                icon: Settings2
+                icon: BookOpenText
             },
             {
                 title: "Regions & Cities Setup",
                 url: "/administration/regions-cities",
-                icon: Settings2
+                icon: MapPin
             },
             {
                 title: "Calendar Setup",
                 url: "/administration/calendar",
-                icon: Settings2
+                icon: CalendarClock
             },
             {
                 title: "Icons Setup",
                 url: "/administration/icons",
-                icon: Settings2
+                icon: LayoutGrid
             },
             {
                 title: "Accounting Linkage Setup",
                 url: "/administration/accounting-linkage",
-                icon: Settings2
+                icon: Link2
             },
             {
                 title: "Mandatory Fields Setup",
                 url: "/administration/mandatory-feilds",
-                icon: Settings2
+                icon: Key // Consider Lock or Asterisk for mandatory fields
             },
         ],
-        icon: Inbox,
+        icon: Inbox, // You could use Briefcase or Gears for Administration
     },
     {
-        title: "Calendar",
-        url: "/finance",
-        icon: Calendar,
-    },
-    {
-        title: "Search",
+        title: "General Setup",
         url: "#",
-        icon: Search,
+        icon: Settings, // Changed from Calendar to Settings for better representation
+        submenus: [
+            {
+                title: "System Parameters",
+                url: "/general-setup",
+                icon: Settings2
+            },
+            {
+                title: "General Information Setup",
+                url: "/general-setup",
+                icon: Building2 // Could also use Info or Newspaper
+            },
+            {
+                title: "Financial Information Setup",
+                url: "/general-setup",
+                icon: CreditCard
+            },
+            {
+                title: "Extra Salary Setup",
+                url: "/general-setup",
+                icon: DollarSign
+            },
+            {
+                title: "Vacations Setup",
+                url: "/general-setup",
+                icon: CalendarOff // Or Beach, PalmTree for vacation
+            },
+            {
+                title: "Allowances Setup",
+                url: "/general-setup",
+                icon: HandCoins
+            },
+            {
+                title: "Insurance Setup",
+                url: "/general-setup",
+                icon: ShieldCheck
+            },
+            {
+                title: "Vacation Parameters Setup",
+                url: "/general-setup",
+                icon: CalendarRange
+            },
+            {
+                title: "Advance Vacation Setup",
+                url: "/general-setup",
+                icon: CalendarPlus
+            },
+            {
+                title: "Contacts Setup",
+                url: "/general-setup",
+                icon: Users2
+            },
+            {
+                title: "Training Setup",
+                url: "/general-setup",
+                icon: GraduationCap
+            },
+        ],
     },
     {
-        title: "Settings",
+        title: "Reports Setup",
         url: "#",
-        icon: Settings,
+        icon: Search, // Or FileText for reports
+        submenus: [
+            {
+                title: "Report Building",
+                url: "/general-setup",
+                icon: Settings2 // Consider List or BarChart for report building
+            },
+            {
+                title: "Customized Salary Setup",
+                url: "/general-setup",
+                icon: Settings2 // Could use Salary or Percent
+            },
+            {
+                title: "Salaries Reports Setup",
+                url: "/general-setup",
+                icon: Settings2 // Could use Salary or BarChart
+            },
+        ]
     },
+    {
+        title: "Employee Profile",
+        url: "#",
+        icon: Settings, // Could use User or Person for employee profile
+        submenus: [
+            {
+                title: "Employee Profile",
+                url: "/general-setup",
+                icon: Users2 // Or User
+            },
+            {
+                title: "Display Employee Information",
+                url: "/general-setup",
+                icon: Users2 // Or Eye
+            },
+            {
+                title: "Employee Explorer",
+                url: "/general-setup",
+                icon: Search // Or Compass
+            },
+        ]
+    },
+    {
+        title: "Financial Profile",
+        url: "#",
+        icon: CreditCard // Changed from Settings for better representation
+    },
+    {
+        title: "Employee Transactions",
+        url: "#",
+        icon: Settings, // Could use Handshake or ArrowsRightLeft for transactions
+        submenus: [
+            {
+                title: "Employees Transation",
+                url: "/general-setup",
+                icon: Users2 // Or Repeat
+            },
+            {
+                title: "Mass Transaction",
+                url: "/general-setup",
+                icon: Repeat // Or Shuffle
+            },
+            {
+                title: "Vacation Resumption",
+                url: "/general-setup",
+                icon: CalendarClock // Or Check
+            },
+            {
+                title: "Display Advanced Vacations",
+                url: "/general-setup",
+                icon: Calendar // Or Eye
+            },
+            {
+                title: "Update Social Security Salary",
+                url: "/general-setup",
+                icon: Shield // Or DollarSign
+            },
+            {
+                title: "Accruing Vacations Balances",
+                url: "/general-setup",
+                icon: Calendar // Or TrendingUp
+            },
+            {
+                title: "Accruing Overtime",
+                url: "/general-setup",
+                icon: Clock // Or TrendingUp
+            },
+            {
+                title: "Accruing Leaves",
+                url: "/general-setup",
+                icon: Calendar // Or TrendingUp
+            },
+            {
+                title: "Update Mass Transactions",
+                url: "/general-setup",
+                icon: Repeat // Or UploadCloud
+            },
+            {
+                title: "Postpone Loans Installments",
+                url: "/general-setup",
+                icon: Clock // Or CalendarDays
+            },
+            {
+                title: "Modify Mass Data Using Excel",
+                url: "/general-setup",
+                icon: FileSpreadsheet // Or UploadCloud
+            },
+            {
+                title: "Loan Modification",
+                url: "/general-setup",
+                icon: CreditCard // Or Edit
+            },
+            {
+                title: "Employees Contracts Renewal",
+                url: "/general-setup",
+                icon: FileText // Or RefreshCcw
+            }
+        ]
+    },
+    {
+        title: "Non-Payroll Transactions",
+        url: "#",
+        icon: Settings, // Could use Coin or DollarSignOff
+        submenus: [
+            {
+                title: "Non-Payroll Item 1",
+                url: "/general-setup",
+                icon: DollarSign // Or CreditCardOff
+            }
+        ]
+    },
+    {
+        title: "Promotion",
+        url: "#",
+        icon: Settings, // Could use Star or Trophy
+        submenus: [
+            {
+                title: "Salary Scale Setup",
+                url: "/general-setup",
+                icon: Scale // Or Percent
+            },
+            {
+                title: "Annual Increase \ Promotion",
+                url: "/general-setup",
+                icon: TrendingUp // Or Star
+            },
+            {
+                title: "Annual Increase & Promotion Report",
+                url: "/general-setup",
+                icon: TrendingUp // Or FileText
+            },
+            {
+                title: "Promotion Appraisal Report",
+                url: "/general-setup",
+                icon: Star // Or FileText
+            }
+        ]
+    },
+    {
+        title: "Time Sheet",
+        url: "#",
+        icon: Settings, // Could use Clock or CalendarDays
+        submenus: [
+            {
+                title: "Setup",
+                url: "/general-setup",
+                icon: Settings2
+            },
+            {
+                title: "Time Sheet",
+                url: "/general-setup",
+                icon: Clock
+            },
+            {
+                title: "Monthly Time SHeet",
+                url: "/general-setup",
+                icon: CalendarDays // Or Clock
+            },
+            {
+                title: "Time Sheet Form Excel",
+                url: "/general-setup",
+                icon: FileSpreadsheet // Or Clock
+            },
+            {
+                title: "Close Time Sheet",
+                url: "/general-setup",
+                icon: XCircle // Or Clock
+            },
+            {
+                title: "Mass Transactions",
+                url: "/general-setup",
+                icon: Repeat // Or Clock
+            }
+        ]
+    },
+    {
+        title: "Display & Post Transactions",
+        url: "#",
+        icon: Eye // Changed from Settings for better representation
+    },
+    {
+        title: "Salary Calculation",
+        url: "#",
+        icon: Settings, // Could use Calculator or Percent
+        submenus: [
+            {
+                title: "Salary Calculation",
+                url: "/general-setup",
+                icon: DollarSign // Or Calculator
+            },
+            {
+                title: "Extra Salary Calculation",
+                url: "/general-setup",
+                icon: DollarSign // Or Calculator
+            },
+            {
+                title: "Employee Termination",
+                url: "/general-setup",
+                icon: UserX // Or X
+            },
+            {
+                title: "Salary Audit Log Report",
+                url: "/general-setup",
+                icon: History // Or FileText
+            },
+            {
+                title: "Cost Distribution",
+                url: "/general-setup",
+                icon: PieChart // Or Layers
+            },
+            {
+                title: "Salary Calculation Update",
+                url: "/general-setup",
+                icon: DollarSign // Or UploadCloud
+            },
+            {
+                title: "Salary Explore",
+                url: "/general-setup",
+                icon: Search // Or DollarSign
+            }
+        ]
+    },
+    {
+        title: "Tickets",
+        url: "#",
+        icon: Settings, // Could use Ticket or Airplane
+        submenus: [
+            {
+                title: "Setup",
+                url: "/general-setup",
+                icon: Settings2
+            },
+            {
+                title: "Airports Setup",
+                url: "/general-setup",
+                icon: Building // Or Building
+            },
+            {
+                title: "Flights Setup",
+                url: "/general-setup",
+                icon: Plane // Or Airplane
+            },
+            {
+                title: "Ticket Issuing",
+                url: "/general-setup",
+                icon: Ticket // Or Pen
+            },
+            {
+                title: "Ticket Accruals",
+                url: "/general-setup",
+                icon: Ticket // Or TrendingUp
+            },
+            {
+                title: "Tickets Issuing Report",
+                url: "/general-setup",
+                icon: Ticket // Or FileText
+            },
+            {
+                title: "Ticket Report",
+                url: "/general-setup",
+                icon: Ticket // Or FileText
+            }
+        ]
+    },
+    {
+        title: "General Reports",
+        url: "#",
+        icon: Settings, // Could use FileText or BarChart
+        submenus: [
+            {
+                title: "Employees Report",
+                url: "/general-setup",
+                icon: Users2 // Or FileText
+            },
+            {
+                title: "Addresses Report",
+                url: "/general-setup",
+                icon: Map // Or FileText
+            },
+            {
+                title: "Referees Report",
+                url: "/general-setup",
+                icon: UserCheck // Or FileText
+            },
+            {
+                title: "Experiences Report",
+                url: "/general-setup",
+                icon: Briefcase // Or FileText
+            },
+            {
+                title: "Documents Report",
+                url: "/general-setup",
+                icon: FileText
+            },
+            {
+                title: "Print Documents Report",
+                url: "/general-setup",
+                icon: Printer // Or FileText
+            },
+            {
+                title: "Skills Report",
+                url: "/general-setup",
+                icon: Award // Or FileText
+            },
+            {
+                title: "Family Report",
+                url: "/general-setup",
+                icon: Users2 // Or FileText
+            },
+            {
+                title: "Children Report",
+                url: "/general-setup",
+                icon: Users2 // Or FileText
+            },
+            {
+                title: "Dependents Report",
+                url: "/general-setup",
+                icon: Users2 // Or FileText
+            },
+            {
+                title: "Qualifications Report",
+                url: "/general-setup",
+                icon: GraduationCap // Or FileText
+            },
+            {
+                title: "Contact Information Report",
+                url: "/general-setup",
+                icon: Phone // Or FileText
+            },
+            {
+                title: "Employee Assets Report",
+                url: "/general-setup",
+                icon: Package // Or FileText
+            },
+            {
+                title: "Training Courses Report",
+                url: "/general-setup",
+                icon: GraduationCap // Or FileText
+            },
+            {
+                title: "Medical Files Report",
+                url: "/general-setup",
+                icon: Stethoscope // Or FileText
+            },
+            {
+                title: "Notes Report",
+                url: "/general-setup",
+                icon: FileText // Or StickyNote
+            },
+            {
+                title: "Additional Fields Report",
+                url: "/general-setup",
+                icon: Asterisk // Or FileText
+            },
+            {
+                title: "Employees Count Report",
+                url: "/general-setup",
+                icon: Users2 // Or BarChart
+            },
+            {
+                title: "Scholarships Report",
+                url: "/general-setup",
+                icon: GraduationCap // Or FileText
+            },
+            {
+                title: "Terminated Employees Report",
+                url: "/general-setup",
+                icon: UserX // Or FileText
+            },
+            {
+                title: "Job Description Report",
+                url: "/general-setup",
+                icon: Briefcase // Or FileText
+            },
+            {
+                title: "C.V Report",
+                url: "/general-setup",
+                icon: FileText
+            },
+            {
+                title: "Employees Contracts Report",
+                url: "/general-setup",
+                icon: FileText
+            },
+            {
+                title: "Signature Report",
+                url: "/general-setup",
+                icon: Signature // Or FileText
+            },
+            {
+                title: "Signature Model Report",
+                url: "/general-setup",
+                icon: Signature // Or FileText
+            },
+            {
+                title: "Employee Card",
+                url: "/general-setup",
+                icon: CreditCard // Or User
+            },
+            {
+                title: "Appraisal Report",
+                url: "/general-setup",
+                icon: Star // Or FileText
+            },
+            {
+                title: "Employees Count Detailed Report",
+                url: "/general-setup",
+                icon: Users2 // Or BarChart
+            },
+            {
+                title: "Operator / Vehicle Assignment Report",
+                url: "/general-setup",
+                icon: Truck // Or FileText
+            }
+        ]
+    },
+    {
+        title: "Financial Reports",
+        url: "#",
+        icon: Settings, // Could use Banknote or BarChart
+        submenus: [
+            {
+                title: "Salaries Reports",
+                url: "/general-setup",
+                icon: DollarSign // Or BarChart
+            },
+            {
+                title: "Social Security Reports",
+                url: "/general-setup",
+                icon: Shield // Or BarChart
+            },
+            {
+                title: "Transactions Reports",
+                url: "/general-setup",
+                icon: Repeat // Or BarChart
+            },
+            {
+                title: "Reserve Reports",
+                url: "/general-setup",
+                icon: Layers // Or BarChart
+            },
+            {
+                title: "Other Reports",
+                url: "/general-setup",
+                icon: FileText // Or BarChart
+            },
+            {
+                title: "Time Sheet Reports",
+                url: "/general-setup",
+                icon: Clock // Or BarChart
+            },
+            {
+                title: "Loans Report",
+                url: "/general-setup",
+                icon: CreditCard // Or BarChart
+            }
+        ]
+    }
 ];
 
 export function AppSidebar() {
     return (
         <Sidebar collapsible="icon" variant="sidebar">
-            <SidebarHeader className="bg-white dark:bg-gray-900 border-b border-gray-200 dark:border-gray-700 px-3 py-5">
-                <Home />
+            <SidebarHeader className="bg-white dark:bg-gray-900 border-b border-gray-200 dark:border-gray-700 px-3 py-4">
+                <span className="text-xl font-semibold text-gray-900 dark:text-white">
+                    QHR
+                </span>
             </SidebarHeader>
             <SidebarContent className="bg-gray-100 dark:bg-gray-900">
                 <SidebarGroup>
-                    <SidebarGroupLabel>Application</SidebarGroupLabel>
+
                     <SidebarGroupContent>
                         <SidebarMenu>
-                            {menuItems.map((item) => (
-                                <Collapsible className="group/collapsible" key={item.title}>
-                                    <SidebarMenuItem key={item.title}>
-                                        <CollapsibleTrigger asChild>
-                                            <SidebarMenuButton>
+                            {menuItems.map((item) =>
+                                item.submenus ? (
+                                    <Collapsible className="group/collapsible" key={item.title}>
+                                        <SidebarMenuItem className="py-2">
+                                            <CollapsibleTrigger asChild>
+                                                <SidebarMenuButton className="hover:bg-gray-200 dark:hover:bg-gray-700 px-3">
+                                                    <item.icon />
+                                                    <span>{item.title}</span>
+                                                    <ChevronDown className="ml-auto h-4 w-4 transition-transform duration-400 group-data-[state=open]/collapsible:rotate-180" />
+                                                </SidebarMenuButton>
+                                            </CollapsibleTrigger>
+                                            <CollapsibleContent className="pl-6">
+                                                <SidebarMenuSub>
+                                                    {item.submenus.map((subItem) => (
+                                                        <SidebarMenuSubItem key={subItem.title}>
+                                                            <Link href={subItem.url} target="_blank" className="flex items-center w-full px-4 py-2 hover:bg-gray-400 dark:hover:bg-gray-700 rounded-md">
+                                                                {subItem.icon && <subItem.icon className="h-4 w-4 mr-2" />}
+                                                                <span>{subItem.title}</span>
+                                                            </Link>
+                                                        </SidebarMenuSubItem>
+                                                    ))}
+                                                </SidebarMenuSub>
+                                            </CollapsibleContent>
+                                        </SidebarMenuItem>
+                                    </Collapsible>
+                                ) : (
+                                    <SidebarMenuItem key={item.title} className="py-2">
+                                        <SidebarMenuButton asChild className="hover:bg-gray-400 dark:hover:bg-gray-700 px-3">
+                                            <Link href={item.url} target="_blank">
                                                 <item.icon />
                                                 <span>{item.title}</span>
-                                            </SidebarMenuButton>
-                                        </CollapsibleTrigger>
-
-                                        <CollapsibleContent>
-                                            <SidebarMenuSub>
-                                                <SidebarMenuSubItem>
-                                                    <Link href={item.url} target="_blank">
-                                                        Hello
-                                                    </Link>
-                                                </SidebarMenuSubItem>
-
-                                            </SidebarMenuSub>
-                                        </CollapsibleContent>
+                                            </Link>
+                                        </SidebarMenuButton>
                                     </SidebarMenuItem>
-                                </Collapsible>
-                            ))}
+                                )
+                            )}
                         </SidebarMenu>
                     </SidebarGroupContent>
                 </SidebarGroup>
                 <SidebarGroup />
             </SidebarContent>
-            <SidebarFooter />
+            <SidebarFooter>
+                <Sheet>
+                    <SheetTrigger>Open</SheetTrigger>
+                    <SheetContent className="w-[400px] sm:w-[540px]">
+                        <SheetHeader>
+                            <SheetTitle>Are you absolutely sure?</SheetTitle>
+                            <SheetDescription>
+                                This action cannot be undone. This will permanently delete your account
+                                and remove your data from our servers.
+                            </SheetDescription>
+                        </SheetHeader>
+                    </SheetContent>
+                </Sheet>
+            </SidebarFooter>
         </Sidebar>
     );
 }

@@ -7,9 +7,8 @@ export default function PageLayout({
     children: React.ReactNode;
 }>) {
     return (
-            <div className="w-full">
-                <PageHeader />
-                {children}
-            </div>
+        <div className="w-full">
+            {children}
+        </div>
     );
 }

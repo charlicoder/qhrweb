@@ -1,11 +1,11 @@
 "use client"
 
 import React, { useState } from 'react'
+import Grid from "@mui/material/Grid";
 import {
     TextField,
     Button,
     MenuItem,
-    Grid,
     InputLabel,
     Select,
     FormControl,
@@ -204,7 +204,7 @@ const DetailsTab = () => {
                         <Grid container spacing={4}>
 
                             {/* Company Information Section */}
-                            <Grid item xs={12}>
+                            <Grid item size={{ xs: 12 }}>
                                 <Card sx={{ borderRadius: 3, overflow: 'hidden', boxShadow: '0 8px 32px rgba(0,0,0,0.08)' }}>
                                     <Box sx={{
                                         background: 'linear-gradient(135deg, #667eea 0%, #764ba2 100%)',
@@ -226,7 +226,7 @@ const DetailsTab = () => {
                                     </Box>
                                     <CardContent sx={{ p: 4 }}>
                                         <Grid container spacing={3}>
-                                            <Grid item xs={12} md={6}>
+                                            <Grid item size={{ xs: 12, md: 6 }}>
                                                 <TextField
                                                     fullWidth
                                                     label="Company Name (English)"
@@ -248,7 +248,7 @@ const DetailsTab = () => {
                                                     }}
                                                 />
                                             </Grid>
-                                            <Grid item xs={12} md={6}>
+                                            <Grid item size={{ xs: 12, md: 6 }}>
                                                 <TextField
                                                     fullWidth
                                                     label="Company Name (Arabic)"
@@ -269,7 +269,7 @@ const DetailsTab = () => {
                                                     }}
                                                 />
                                             </Grid>
-                                            <Grid item xs={12} md={6}>
+                                            <Grid item size={{ xs: 12, md: 6 }}>
                                                 <TextField
                                                     fullWidth
                                                     label="Address (English)"
@@ -292,7 +292,7 @@ const DetailsTab = () => {
                                                     }}
                                                 />
                                             </Grid>
-                                            <Grid item xs={12} md={6}>
+                                            <Grid item size={{ xs: 12, md: 6 }}>
                                                 <TextField
                                                     fullWidth
                                                     label="Address (Arabic)"
@@ -315,7 +315,7 @@ const DetailsTab = () => {
                                                     }}
                                                 />
                                             </Grid>
-                                            <Grid item xs={12} md={6}>
+                                            <Grid item size={{ xs: 12, md: 6 }}>
                                                 <FormControl fullWidth>
                                                     <InputLabel>Country</InputLabel>
                                                     <Select
@@ -346,7 +346,7 @@ const DetailsTab = () => {
                             </Grid>
 
                             {/* Contact Information Section */}
-                            <Grid item xs={12}>
+                            <Grid item size={{ xs: 12 }}>
                                 <Card sx={{ borderRadius: 3, overflow: 'hidden', boxShadow: '0 8px 32px rgba(0,0,0,0.08)' }}>
                                     <Box sx={{
                                         background: 'linear-gradient(135deg, #f093fb 0%, #f5576c 100%)',
@@ -368,7 +368,7 @@ const DetailsTab = () => {
                                     </Box>
                                     <CardContent sx={{ p: 4 }}>
                                         <Grid container spacing={3}>
-                                            <Grid item xs={12} md={6}>
+                                            <Grid item size={{ xs: 12, md: 6 }}>
                                                 <TextField
                                                     fullWidth
                                                     label="Primary Phone"
@@ -390,7 +390,7 @@ const DetailsTab = () => {
                                                     }}
                                                 />
                                             </Grid>
-                                            <Grid item xs={12} md={6}>
+                                            <Grid item size={{ xs: 12, md: 6 }}>
                                                 <TextField
                                                     fullWidth
                                                     label="Secondary Phone"
@@ -412,7 +412,7 @@ const DetailsTab = () => {
                                                     }}
                                                 />
                                             </Grid>
-                                            <Grid item xs={12} md={6}>
+                                            <Grid item size={{ xs: 12, md: 6 }}>
                                                 <TextField
                                                     fullWidth
                                                     label="Email Address"
@@ -435,7 +435,7 @@ const DetailsTab = () => {
                                                     }}
                                                 />
                                             </Grid>
-                                            <Grid item xs={12} md={6}>
+                                            <Grid item size={{ xs: 12, md: 6 }}>
                                                 <TextField
                                                     fullWidth
                                                     label="Website"
@@ -457,7 +457,7 @@ const DetailsTab = () => {
                                                     }}
                                                 />
                                             </Grid>
-                                            <Grid item xs={12} md={6}>
+                                            <Grid item size={{ xs: 12, md: 6 }}>
                                                 <TextField
                                                     fullWidth
                                                     label="P.O. Box"
@@ -472,7 +472,7 @@ const DetailsTab = () => {
                                                     }}
                                                 />
                                             </Grid>
-                                            <Grid item xs={12} md={6}>
+                                            <Grid item size={{ xs: 12, md: 6 }}>
                                                 <TextField
                                                     fullWidth
                                                     label="Zip Code"
@@ -493,7 +493,7 @@ const DetailsTab = () => {
                             </Grid>
 
                             {/* Banking Information Section */}
-                            <Grid item xs={12}>
+                            <Grid item size={{ xs: 12 }}>
                                 <Card sx={{ borderRadius: 3, overflow: 'hidden', boxShadow: '0 8px 32px rgba(0,0,0,0.08)' }}>
                                     <Box sx={{
                                         background: 'linear-gradient(135deg, #4facfe 0%, #00f2fe 100%)',
@@ -515,7 +515,7 @@ const DetailsTab = () => {
                                     </Box>
                                     <CardContent sx={{ p: 4 }}>
                                         <Grid container spacing={3}>
-                                            <Grid item xs={12} md={6}>
+                                            <Grid item size={{ xs: 12, md: 6 }}>
                                                 <FormControl fullWidth>
                                                     <InputLabel>Bank Name</InputLabel>
                                                     <Select
@@ -543,7 +543,7 @@ const DetailsTab = () => {
                                                     </Select>
                                                 </FormControl>
                                             </Grid>
-                                            <Grid item xs={12} md={6}>
+                                            <Grid item size={{ xs: 12, md: 6 }}>
                                                 <FormControl fullWidth disabled={!formData.bank_id}>
                                                     <InputLabel>Bank Branch</InputLabel>
                                                     <Select
@@ -568,7 +568,7 @@ const DetailsTab = () => {
                                                     </Select>
                                                 </FormControl>
                                             </Grid>
-                                            <Grid item xs={12} md={6}>
+                                            <Grid item size={{ xs: 12, md: 6 }}>
                                                 <TextField
                                                     fullWidth
                                                     label="Account Number"
@@ -582,7 +582,7 @@ const DetailsTab = () => {
                                                     }}
                                                 />
                                             </Grid>
-                                            <Grid item xs={12} md={6}>
+                                            <Grid item size={{ xs: 12, md: 6 }}>
                                                 <FormControl fullWidth>
                                                     <InputLabel>Currency</InputLabel>
                                                     <Select
@@ -620,7 +620,7 @@ const DetailsTab = () => {
                             </Grid>
 
                             {/* Logo Upload Section */}
-                            <Grid item xs={12}>
+                            <Grid item size={{ xs: 12 }}>
                                 <Card sx={{ borderRadius: 3, overflow: 'hidden', boxShadow: '0 8px 32px rgba(0,0,0,0.08)' }}>
                                     <Box sx={{
                                         background: 'linear-gradient(135deg, #fa709a 0%, #fee140 100%)',
@@ -642,7 +642,7 @@ const DetailsTab = () => {
                                     </Box>
                                     <CardContent sx={{ p: 4 }}>
                                         <Grid container spacing={4}>
-                                            <Grid item xs={12} md={6}>
+                                            <Grid item size={{ xs: 12, md: 6 }}>
                                                 <DropzoneCard
                                                     onDrop={(file) => handleLogoDrop(file, 'logo')}
                                                     preview={logoPreview}
@@ -650,7 +650,7 @@ const DetailsTab = () => {
                                                     icon={<UploadIcon sx={{ fontSize: 48, color: 'primary.main' }} />}
                                                 />
                                             </Grid>
-                                            <Grid item xs={12} md={6}>
+                                            <Grid item size={{ xs: 12, md: 6 }}>
                                                 <DropzoneCard
                                                     onDrop={(file) => handleLogoDrop(file, 'small')}
                                                     preview={smallLogoPreview}
@@ -664,7 +664,7 @@ const DetailsTab = () => {
                             </Grid>
 
                             {/* Additional Information Section */}
-                            <Grid item xs={12}>
+                            <Grid item size={{ xs: 12 }}>
                                 <Card sx={{ borderRadius: 3, overflow: 'hidden', boxShadow: '0 8px 32px rgba(0,0,0,0.08)' }}>
                                     <Box sx={{
                                         background: 'linear-gradient(135deg, #a8edea 0%, #fed6e3 100%)',
@@ -686,7 +686,7 @@ const DetailsTab = () => {
                                     </Box>
                                     <CardContent sx={{ p: 4 }}>
                                         <Grid container spacing={3}>
-                                            <Grid item xs={12} md={6}>
+                                            <Grid item size={{ xs: 12, md: 6 }}>
                                                 <TextField
                                                     fullWidth
                                                     label="Employer EID"
@@ -701,7 +701,7 @@ const DetailsTab = () => {
                                                     }}
                                                 />
                                             </Grid>
-                                            <Grid item xs={12} md={6}>
+                                            <Grid item size={{ xs: 12, md: 6 }}>
                                                 <TextField
                                                     fullWidth
                                                     label="Industry Type"
@@ -716,7 +716,7 @@ const DetailsTab = () => {
                                                     }}
                                                 />
                                             </Grid>
-                                            <Grid item xs={12} md={6}>
+                                            <Grid item size={{ xs: 12, md: 6 }}>
                                                 <TextField
                                                     fullWidth
                                                     label="Company Profile"
@@ -733,7 +733,7 @@ const DetailsTab = () => {
                                                     }}
                                                 />
                                             </Grid>
-                                            <Grid item xs={12} md={6}>
+                                            <Grid item size={{ xs: 12, md: 6 }}>
                                                 <TextField
                                                     fullWidth
                                                     label="Legal Form"
@@ -774,7 +774,7 @@ const DetailsTab = () => {
                             </Grid>
 
                             {/* Action Buttons */}
-                            <Grid item xs={12}>
+                            <Grid item size={{ xs: 12 }}>
                                 <Paper
                                     elevation={0}
                                     sx={{

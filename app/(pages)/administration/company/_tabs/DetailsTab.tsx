@@ -1,6 +1,6 @@
 "use client"
 
-import React, { useState } from 'react'
+import React, { useEffect, useState } from 'react'
 import Grid from "@mui/material/Grid";
 import {
     TextField,
@@ -44,9 +44,11 @@ const countryList = [
 
 const currencyList = ["AED", "USD", "EUR", "QAR", "SAR", "JOD", "KWD", "BHD", "OMR", "EGP", "LBP"];
 
-// API base points to the Django server on port 8000 at the same host
-const API_BASE = "";
-
+import {
+    useGetCompanyBranchQuery,
+    useGetBanksQuery,
+    useGetBankBranchesQuery,
+} from "@/store/features/administrationApi";
 
 const DetailsTab = () => {
 
@@ -56,6 +58,28 @@ const DetailsTab = () => {
     const [smallLogoPreview, setSmallLogoPreview] = useState(null);
     const [loading, setLoading] = useState(false);
     const [saveSuccess, setSaveSuccess] = useState(false);
+
+    useEffect(() => {
+        const fetchBankData = async () => {
+            const {
+                data: fbanks, // Renamed from initialBanks to just 'banks' for clarity
+                error: banksError,
+                isLoading: isLoadingBanks,
+                isSuccess: isSuccessBanks,
+            } = useGetBanksQuery();
+
+            if (banksError) {
+                console.log(banksError)
+            }
+
+            if (fbanks) {
+                setBanks(fbanks)
+            }
+        }
+
+        fetchBankData()
+    }, [])
+
 
     const [formData, setFormData] = useState({
         name_en: "",

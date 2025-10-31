@@ -1,5 +1,5 @@
 import type { Metadata } from "next";
-import { ThemeProvider } from "@/providers/ThemeProvider";
+import ReduxProvider from "@/providers/ReduxProvider";
 
 export const metadata: Metadata = {
     title: "Create Next App",
@@ -14,14 +14,9 @@ export default function RootLayout({
     return (
         <html lang="en" suppressHydrationWarning>
             <body >
-                <ThemeProvider
-                    attribute="class"
-                    defaultTheme="system"
-                    enableSystem
-                    disableTransitionOnChange
-                >
+                <ReduxProvider>
                     {children}
-                </ThemeProvider>
+                </ReduxProvider>
             </body>
         </html>
     );

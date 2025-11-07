@@ -1,5 +1,3 @@
-import "@/app/globals.css";
-import PageHeader from "@/components/layout/PageHeader";
 
 export default function PageLayout({
     children,

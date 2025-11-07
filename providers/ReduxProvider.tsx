@@ -5,7 +5,7 @@ import { store } from "@/store";
 import { ThemeProvider } from "@/providers/ThemeProvider";
 
 
-export default function ReduxProvider({ children }) {
+export default function ReduxProvider({ children, }: { children: React.ReactNode }) {
     return (
         <Provider store={store}>
             <ThemeProvider

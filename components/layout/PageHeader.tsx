@@ -2,19 +2,18 @@
 import { useTheme } from "next-themes";
 import { Button } from "@/components/ui/button";
 import { Sun, Moon } from "lucide-react";
-import { SidebarTrigger } from "@/components/ui/sidebar";
 import Link from "next/link";
 import { useEffect, useState } from "react";
 
 const PageHeader = () => {
-    const {theme, setTheme} = useTheme()
+    const { theme, setTheme } = useTheme()
     const [isDark, setIsDark] = useState(false)
 
     useEffect(() => {
         setIsDark(theme === "dark")
     }, [isDark, theme])
 
-    const toggleTheme = () => setTheme(theme == "dark"? "light": "dark")
+    const toggleTheme = () => setTheme(theme == "dark" ? "light" : "dark")
 
     return (
         <header className="bg-white dark:bg-gray-900 border-b border-gray-200 dark:border-gray-700 px-5 py-3">

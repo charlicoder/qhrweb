@@ -209,7 +209,7 @@ export const menuItems = [
         submenus: [
             {
                 title: "Employees Transation",
-                url: "/general-setup",
+                url: "/employees-transactions",
                 icon: Users2 // Or Repeat
             },
             {

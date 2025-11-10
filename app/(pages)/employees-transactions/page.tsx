@@ -1,10 +1,18 @@
 import { HeaderActions } from "@/components/HeaderActions";
 import { AnimatedTabs } from "@/components/AnimatedTabs";
-import Overtime from "./Overtime";
+import Overtime from "./tabs/Overtime";
 import ETFilterForm from "./FilterForm";
+import Leaves from "./tabs/Leaves";
+import Vacations from "./tabs/Vacations";
+import VacationCompensation from "./tabs/VacationsCompensation";
+import VacationAdjustment from "./tabs/VacationAdjustment";
+import SalaryIncrease from "./tabs/SalaryIncrease";
+import Loans from "./tabs/Loans";
+import OtherBenifits from "./tabs/OtherBenifits";
+import OtherDeductions from "./tabs/OtherDeductions";
 
 const EmployeeTransactions = () => {
-    
+
     const tabsData = [
         {
             value: "overtimes",
@@ -14,53 +22,48 @@ const EmployeeTransactions = () => {
         {
             value: "leaves",
             label: "Leaves",
-            content: <div>Change your password here.</div>,
+            content: <Leaves />,
         },
         {
             value: "vacations",
             label: "Vacations",
-            content: <div>Vacations content goes here.</div>,
+            content: <Vacations />,
         },
         {
             value: "vacations_compensation",
             label: "Vacations Compensation",
-            content: <div>Vacations Compensation content.</div>,
+            content: <VacationCompensation />,
         },
         {
             value: "vacation_adjustment",
             label: "Vacation Adjustment",
-            content: <div>Vacation Adjustment content.</div>,
+            content: <VacationAdjustment />,
         },
         {
             value: "salary_increase",
             label: "Salary Increase",
-            content: <div>Salary Increase content.</div>,
+            content: <SalaryIncrease />,
         },
         {
             value: "loans",
             label: "Loans",
-            content: <div>Loans content goes here.</div>,
+            content: <Loans />,
         },
         {
             value: "other_benefits",
             label: "Other Benefits",
-            content: <div>Other Benefits content.</div>,
+            content: <OtherBenifits />,
         },
         {
             value: "other_deductions",
             label: "Other Deductions",
-            content: <div>Other Deductions content.</div>,
+            content: <OtherDeductions />,
         },
     ];
 
     return (
         <>
-            <h1 className="scroll-m-20 text-center text-4xl font-extrabold tracking-tight text-balance mb-5">
-                Employee Transactions
-            </h1>
-            <hr />
-
-            <div className="p-5">
+            <div className="">
                 <HeaderActions />
                 <ETFilterForm />
                 <AnimatedTabs tabs={tabsData} defaultValue="overtimes" />

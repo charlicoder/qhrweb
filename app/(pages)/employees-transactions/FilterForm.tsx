@@ -24,7 +24,7 @@ const ETFilterForm = () => {
     // State to manage the date pickers
     const [startDate, setStartDate] = useState<Date | undefined>();
     const [endDate, setEndDate] = useState<Date | undefined>();
-    
+
     // State to control the accordion's open/closed state
     const [accordionValue, setAccordionValue] = useState("");
 
@@ -37,10 +37,10 @@ const ETFilterForm = () => {
                 setAccordionValue(""); // Ensure it's closed on mobile
             }
         };
-        
+
         // Set initial state
         handleResize();
-        
+
         // Optional: listen to resize events if you want it to adapt dynamically
         // window.addEventListener('resize', handleResize);
         // return () => window.removeEventListener('resize', handleResize);
@@ -57,13 +57,13 @@ const ETFilterForm = () => {
     };
 
     return (
-        <form className="w-full">
-            <Accordion 
-              type="single" 
-              collapsible 
-              className="w-full p-4 border rounded-lg bg-card text-card-foreground"
-              value={accordionValue}
-              onValueChange={handleValueChange}
+        <form className="w-ful">
+            <Accordion
+                type="single"
+                collapsible
+                className="w-full p-4 border rounded-none bg-card text-card-foreground"
+                value={accordionValue}
+                onValueChange={handleValueChange}
             >
                 <AccordionItem value="item-1" className="border-b-0">
                     <AccordionTrigger className="p-0 hover:no-underline lg:cursor-default">

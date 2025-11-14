@@ -8,7 +8,7 @@ export default function PageLayout({
     children: React.ReactNode;
 }>) {
     return (
-        <div className="w-full p-5">
+        <div className="w-full p-5 bg-gray-200 dark:bg-gray-800">
 
             {children}
         </div>

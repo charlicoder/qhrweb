@@ -1,6 +1,5 @@
 import { Card, CardContent, CardHeader, CardTitle, CardDescription } from "@/components/ui/card";
-import React from "react";
-import { OvertimeDataTable } from "./OvertimeDataTable";
+import { OvertimeDataTable } from "./data-tables/OvertimeDataTable";
 
 const Overtime = () => {
     return (

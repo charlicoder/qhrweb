@@ -214,17 +214,17 @@ export const menuItems = [
             },
             {
                 title: "Mass Transaction",
-                url: "/general-setup",
+                url: "/mass-transaction",
                 icon: Repeat // Or Shuffle
             },
             {
                 title: "Vacation Resumption",
-                url: "/general-setup",
+                url: "/vacation-resumption",
                 icon: CalendarClock // Or Check
             },
             {
                 title: "Display Advanced Vacations",
-                url: "/general-setup",
+                url: "/advanced-vacations",
                 icon: Calendar // Or Eye
             },
             {

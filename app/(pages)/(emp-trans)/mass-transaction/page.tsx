@@ -1,4 +1,3 @@
-import React from 'react'
 import { HeaderActions } from "@/components/HeaderActions";
 import { AnimatedTabs } from "@/components/AnimatedTabs";
 import MassTransactions from './tabs/mass-transactions';

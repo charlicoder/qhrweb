@@ -8,7 +8,6 @@ import { Button } from "@/components/ui/button";
 import {
     Form,
     FormControl,
-    FormDescription,
     FormField,
     FormItem,
     FormLabel,
@@ -32,6 +31,8 @@ import { Calendar } from "@/components/ui/calendar";
 import { CalendarIcon } from "lucide-react";
 import { format } from "date-fns";
 import { RadioGroup, RadioGroupItem } from "@/components/ui/radio-group";
+import { Separator } from "@/components/ui/separator";
+import { Textarea } from "@/components/ui/textarea";
 
 // Schema for the general options
 const generalOptionsSchema = z.object({
@@ -437,10 +438,12 @@ export function MTForm() {
                         </FormItem>
                     )}
                 />
+                <Separator />
 
                 <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-6">
                     {/* Column 1 */}
-                    <div className="space-y-6"> {/* Added space-y-6 for vertical spacing between fields */}
+                    <div className="space-y-6 p-5 card border"> {/* Added space-y-6 for vertical spacing between fields */}
+                        
                         <FormField
                             control={form.control}
                             name="employeeId"
@@ -633,22 +636,6 @@ export function MTForm() {
 
                         <FormField
                             control={form.control}
-                            name="exempted"
-                            render={({ field }) => (
-                                <FormItem className="flex flex-row items-center space-x-3 space-y-0 pt-4">
-                                    <FormControl>
-                                        <Checkbox
-                                            checked={field.value}
-                                            onCheckedChange={field.onChange}
-                                        />
-                                    </FormControl>
-                                    <FormLabel className="font-normal">Exempted</FormLabel>
-                                </FormItem>
-                            )}
-                        />
-
-                        <FormField
-                            control={form.control}
                             name="calculateValueAsRatio"
                             render={({ field }) => (
                                 <FormItem className="flex flex-row items-center space-x-3 space-y-0 pt-4">
@@ -662,10 +649,12 @@ export function MTForm() {
                                 </FormItem>
                             )}
                         />
+
                     </div>
 
                     {/* Column 2 */}
-                    <div className="space-y-6"> {/* Added space-y-6 for vertical spacing between fields */}
+                    <div className="space-y-6 p-5 card border"> {/* Added space-y-6 for vertical spacing between fields */}
+                        
                         <FormField
                             control={form.control}
                             name="stopSalary"
@@ -873,10 +862,28 @@ export function MTForm() {
                                 </FormItem>
                             )}
                         />
+
+                        <FormField
+                            control={form.control}
+                            name="exempted"
+                            render={({ field }) => (
+                                <FormItem className="flex flex-row items-center space-x-3 space-y-0 pt-4">
+                                    <FormControl>
+                                        <Checkbox
+                                            checked={field.value}
+                                            onCheckedChange={field.onChange}
+                                        />
+                                    </FormControl>
+                                    <FormLabel className="font-normal">Exempted</FormLabel>
+                                </FormItem>
+                            )}
+                        />
+
                     </div>
 
                     {/* Column 3 */}
-                    <div className="space-y-6"> {/* Added space-y-6 for vertical spacing between fields */}
+                    <div className="space-y-6 p-5 card border"> {/* Added space-y-6 for vertical spacing between fields */}
+                        
                         <FormField
                             control={form.control}
                             name="leaveType"
@@ -1031,26 +1038,28 @@ export function MTForm() {
                                 </FormItem>
                             )}
                         />
-                    </div>
-                </div>
 
-                <div className="mt-8 space-y-6"> {/* Added space-y-6 for vertical spacing */}
-                    <FormField
+                        <FormField
                         control={form.control}
                         name="notes"
                         render={({ field }) => (
                             <FormItem>
                                 <FormLabel>Notes</FormLabel>
                                 <FormControl>
-                                    <Input placeholder="Enter Notes" {...field} />
+                                    <Textarea placeholder="Enter Notes" {...field} />
                                 </FormControl>
                                 <FormMessage />
                             </FormItem>
                         )}
                     />
+
+                    </div>
+                    
                 </div>
 
-                <Button type="submit" className="mt-6">Calculate</Button>
+                <div className="">
+                    <Button type="submit" className="mt-6">Calculate</Button>
+                </div>
             </form>
         </Form>
     );

@@ -16,7 +16,7 @@ import { CalendarIcon } from "lucide-react"; // Assuming you might want a calend
 import { Popover, PopoverContent, PopoverTrigger } from "@/components/ui/popover";
 import { Calendar } from "@/components/ui/calendar";
 import { Checkbox } from "@/components/ui/checkbox";
-import { Card, CardContent, CardHeader, CardTitle } from "@/components/ui/card";
+import { Separator } from "@/components/ui/separator";
 
 export function ExcelTransactionForm() {
     const [selectedTransactionType, setSelectedTransactionType] = useState("Overtime");
@@ -99,10 +99,11 @@ export function ExcelTransactionForm() {
                         </div>
                     </RadioGroup>
                 </div>
+                <Separator />
 
                 {/* Two-column grid for other fields */}
-                <div className="grid grid-cols-1 md:grid-cols-2 gap-6">
-                    <div className="grid gap-6"> {/* Left column */}
+                <div className="grid grid-cols-1 md:grid-cols-2 gap-6 p-5 card border">
+                    <div className="grid gap-4"> {/* Left column */}
                         <div>
                             <Label htmlFor="transactionType">Transaction Type</Label>
                             <Select

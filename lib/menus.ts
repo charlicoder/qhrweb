@@ -224,17 +224,17 @@ export const menuItems = [
             },
             {
                 title: "Display Advanced Vacations",
-                url: "/advanced-vacations",
+                url: "/display-advanced-vacations",
                 icon: Calendar // Or Eye
             },
             {
                 title: "Update Social Security Salary",
-                url: "/general-setup",
+                url: "/update-social-security-salary",
                 icon: Shield // Or DollarSign
             },
             {
                 title: "Accruing Vacations Balances",
-                url: "/general-setup",
+                url: "/accruing-vacations-balances",
                 icon: Calendar // Or TrendingUp
             },
             {

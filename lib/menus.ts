@@ -233,18 +233,18 @@ export const menuItems = [
                 icon: Shield // Or DollarSign
             },
             {
-                title: "Accruing Vacations Balances",
-                url: "/accruing-vacations-balances",
+                title: "Accuring Vacations Balances",
+                url: "/accuring-vacations-balances",
                 icon: Calendar // Or TrendingUp
             },
             {
-                title: "Accruing Overtime",
-                url: "/general-setup",
+                title: "Accuring Overtime",
+                url: "/accuring-overtime",
                 icon: Clock // Or TrendingUp
             },
             {
-                title: "Accruing Leaves",
-                url: "/general-setup",
+                title: "Accuring Leaves",
+                url: "/accuring-leaves",
                 icon: Calendar // Or TrendingUp
             },
             {

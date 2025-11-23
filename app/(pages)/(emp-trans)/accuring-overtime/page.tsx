@@ -1,5 +1,5 @@
 import { HeaderActions } from "@/components/HeaderActions";
-import { AccuringVacationsBalancesForm } from "./AccuringVacationsBalancesForm";
+import { AccuringOvertimeForm } from "./AccuringOvertimeForm";
 import React, { Fragment } from 'react'
 
 export default function AccuringVacationsBalancesPage() { // <-- Exporting a React Component
@@ -7,7 +7,7 @@ export default function AccuringVacationsBalancesPage() { // <-- Exporting a Rea
         <Fragment>
             <HeaderActions />
             {/* You can add a header or navigation here if needed */}
-            <AccuringVacationsBalancesForm />
+            <AccuringOvertimeForm />
         </Fragment>
     );
 }

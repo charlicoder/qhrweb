@@ -105,7 +105,7 @@ const defaultValues = {
     employeeName: "",
 };
 
-export function UpdateSocialSecuritySalaryForm() {
+export function AccuringVacationsBalancesForm() {
     const methods = useForm({
         defaultValues: defaultValues,
     });
@@ -134,7 +134,7 @@ export function UpdateSocialSecuritySalaryForm() {
 
     return (
         <div className="container mx-auto px-4 py-8 bg-white dark:bg-gray-900">
-            <h2 className="text-2xl font-bold mb-6">Update Social Security Salary</h2>
+            <h2 className="text-2xl font-bold mb-6">Accuring Vacations Balances</h2>
             <Separator className="mb-6" />
 
             {/* Use FormProvider to explicitly provide context */}
@@ -470,3 +470,4 @@ export function UpdateSocialSecuritySalaryForm() {
         </div>
     );
 }
+

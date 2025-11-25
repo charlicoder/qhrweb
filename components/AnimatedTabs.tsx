@@ -26,7 +26,7 @@ export function AnimatedTabs({ tabs, defaultValue }: AnimatedTabsProps) {
       {/* Updated TabsList with responsiveness */}
       <TabsList className="
         w-full h-[60px] justify-start rounded-none bg-transparent p-0 
-        border border-gray-200 dark:border-gray-700
+        border border-blue-200 dark:border-gray-700
         overflow-x-auto
         [&::-webkit-scrollbar]:hidden [-ms-overflow-style:none] [scrollbar-width:none]
       ">

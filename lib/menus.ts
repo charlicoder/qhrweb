@@ -249,27 +249,27 @@ export const menuItems = [
             },
             {
                 title: "Update Mass Transactions",
-                url: "/general-setup",
+                url: "/update-mass-transactions",
                 icon: Repeat // Or UploadCloud
             },
             {
                 title: "Postpone Loans Installments",
-                url: "/general-setup",
+                url: "/postpone-loans-installments",
                 icon: Clock // Or CalendarDays
             },
             {
                 title: "Modify Mass Data Using Excel",
-                url: "/general-setup",
+                url: "/modify-mass-data-using-excel",
                 icon: FileSpreadsheet // Or UploadCloud
             },
             {
                 title: "Loan Modification",
-                url: "/general-setup",
+                url: "/loan-modification",
                 icon: CreditCard // Or Edit
             },
             {
                 title: "Employees Contracts Renewal",
-                url: "/general-setup",
+                url: "/employees-contracts-renewal",
                 icon: FileText // Or RefreshCcw
             }
         ]
